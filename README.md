@@ -1,2 +1,2 @@
-# Clip_Image_Search
-Implementation and Fine Tuning of Clip Model 
+# Image_Search
+Implementation of Image Search Using BLIP and Clip 
