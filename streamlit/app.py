@@ -103,8 +103,8 @@ def main():
 
     img = load_image_upload()
     if img != None :
-        # load_blip_prompt(img)
-        load_clip_similar(img)
+        load_blip_prompt(img)
+#         load_clip_similar(img)
 
 if __name__ == '__main__':
     main()
