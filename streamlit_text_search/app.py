@@ -110,13 +110,16 @@ def remove_duplicates(imgs):
 
 def main():
     set_global_variables()
-    
+    # Setting db limit
     df = load_and_process_data(500)
+    print('Data Loaded')
     df = create_text_image_embedding(df)
-    st.title('Image Search Question Answering using BLIP_2')
-    query = st.text_input('Type to Search', 'ex: Car')
+    print('Created Text and Image Embedding')
+    st.title('Image Search Using Clip')
+    query = st.text_input('Type to Search', 'Car')
     st.write('The current input query is:', query)
     imgs = get_top_N_images(query, df,top_K=15)
+    print('Retrived Images')
     rs = remove_duplicates(imgs)
     st.image(rs['image'])
     # df.shape[0]
